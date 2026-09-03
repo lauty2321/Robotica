@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Tu Nombre">
-    <meta name="description" content="descripcion de tu sitio">
-    <meta name="keywords" content="palabras, clave, relacionadas, con, tu, sitio">
+    <meta name="author" content="Lautaro">
+    <meta name="description" content="hablamos de la robotica de los cursos">
+    <meta name="keywords" content="Robotica,cursos y web informativa ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/30Sep24 Anis Robot Free Upload.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Practica</title>
 </head>
 <body>
@@ -39,12 +40,29 @@
     <ul>
       <li><a href="Index.html">Inicio</a></li>
       <li><a href="Menu de nav/robotica.html">Robotica</a></li>
-      <li><a href="Menu de nav/Proyecto.html">Proyecto</a></li>
-      <li><a href="Menu de nav/contacto.html">Contacto</a></li>
+      <li><a href="Proyecto.html">Proyecto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
 
   <!-- CARDS -->
+   <section class="carousel">
+    <div class="carousel-container">
+      <img src="img/modelo 1.jpg" class="slide active">
+      <img src="img/Modelo 2.jfif" class="slide">
+      <img src="img/modelo 3.jpg" class="slide">
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
   <section class="cards">
     <div class="card">
       <img src="img/robotica.jpg" alt="">
@@ -69,31 +87,27 @@
   </section>
 
   <!-- CARRUSEL -->
-  <section class="carousel">
-    <div class="carousel-container">
-      <img src="img/modelo 1.jpg" class="slide active">
-      <img src="img/Modelo 2.jfif" class="slide">
-      <img src="img/modelo 3.jpg" class="slide">
-    </div>
-
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </section>
+  
 
   <!-- FOOTER -->
-  <footer>
-    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="logo">
-    <p>© 2026 Todos los derechos reservados</p>
-    <p>Teléfono: +54 11265444906</p>
-    <p>Email: neulautaroramon@colegiomanoamiga.edu.ar</p>
-    <p>Información de contacto: Pilar, Buenos Aires, Argentina</p>
-  </footer>
+       <footer>
+            <h2>Seguinos en nuetras redes</h2>
+
+            <div class="redes">
+                <a href="https://www.whatsapp.com" target="_blank" class= "whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/departamentosistemas?igsi=MXgxem16ZHRra3QwbA%3D%3D"target="_blank" class= "instagram">
+                    <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com"target="_blank" class= "tiktok">
+                    <i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com"target="_blank" class= "facebook">
+                    <i class="fa-brands fa-facebook"></i></a>
+            </div>
+
+            <p>&copy;Todos los derechos reservados</p>
+
+
+        </footer>
 
   <script src="script.js"></script>
 

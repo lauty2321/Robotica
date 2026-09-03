@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Proyectos de robótica de 1.º a 6.º año">
+    <meta name="keywords"
+        content="robótica, Arduino, proyectos, programación, electrónica">
+
+    <link rel="shortcut icon"
+        href="../img/30Sep24 Anis Robot Free Upload.png"
+        type="image/x-icon">
+
+    <link rel="stylesheet" href="css/stylerobotica.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Proyectos de Robótica</title>
+</head>
+
+<body>
+
+    <!-- ================= NAV ================= -->
+
+    <nav>
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+             alt="Logo de robótica">
+
+        <ul>
+            <li><a href="../Index.html">Inicio</a></li>
+            <li><a href="robotica.html">Robótica</a></li>
+            <li><a href="Proyecto.html" class="activo">Proyectos</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ================= ENCABEZADO ================= -->
+
+    <header class="proyectos-hero">
+
+        <div class="hero-contenido">
+
+            <span class="etiqueta">TECNOLOGÍA · PROGRAMACIÓN · ROBÓTICA</span>
+
+            <h1>
+                Proyectos de Robótica
+            </h1>
+
+            <p>
+                Explorá los proyectos realizados desde 1.º hasta 6.º año,
+                aprendiendo programación, electrónica, automatización,
+                Arduino y sistemas inteligentes.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= AÑOS ================= -->
+
+    <main class="proyectos">
+
+        <div class="titulo-seccion">
+
+            <span>PROYECTOS ESCOLARES</span>
+
+            <h2>
+                Elegí un año
+            </h2>
+
+            <p>
+                Cada curso trabaja diferentes contenidos y proyectos
+                relacionados con la robótica y la tecnología.
+            </p>
+
+        </div>
+
+
+        <section class="años">
+
+
+            <!-- 1.º AÑO -->
+
+            <article class="año-card">
+
+                <div class="numero">
+                    01
+                </div>
+
+                <div class="icono">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <h3>1.º Año</h3>
+
+                <p>
+                    Introducción a la tecnología y al mundo de la robótica.
+                </p>
+
+              
+
+                <button onclick="mostrarProyecto('primero')">
+                    Ver proyecto
+                </button>
+
+            </article>
+
+
+            <!-- 2.º AÑO -->
+
+            <article class="año-card">
+
+                <div class="numero">
+                    02
+                </div>
+
+                <div class="icono">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>2.º Año</h3>
+
+                <p>
+                    Programación y primeros proyectos electrónicos.
+                </p>
+
+                
+                <button onclick="mostrarProyecto('segundo')">
+                    Ver proyecto
+                </button>
+
+            </article>
+
+
+            <!-- 3.º AÑO -->
+
+            <article class="año-card">
+
+                <div class="numero">
+                    03
+                </div>
+
+                <div class="icono">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+
+                <h3>3.º Año</h3>
+
+                <p>
+                    Automatización y programación de robots.
+                </p>
+
+              
+                <button onclick="mostrarProyecto('tercero')">
+                    Ver proyecto
+                </button>
+
+            </article>
+
+
+            <!-- 4.º AÑO -->
+
+            <article class="año-card">
+
+                <div class="numero">
+                    04
+                </div>
+
+                <div class="icono">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+
+                <h3>4.º Año</h3>
+
+                <p>
+                    Automatización y desarrollo de sistemas robóticos.
+                </p>
+
+                <button onclick="mostrarProyecto('cuarto')">
+                    Ver proyecto
+                </button>
+
+            </article>
+
+
+            <!-- 5.º AÑO -->
+
+            <article class="año-card">
+
+                <div class="numero">
+                    05
+                </div>
+
+                <div class="icono">
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
+
+                <h3>5.º Año</h3>
+
+                <p>
+                    Desarrollo de proyectos tecnológicos más complejos.
+                </p>
+
+                
+                <button onclick="mostrarProyecto('quinto')">
+                    Ver proyecto
+                </button>
+
+            </article>
+
+
+            <!-- 6.º AÑO -->
+
+            <article class="año-card destacado">
+
+                <div class="numero">
+                    06
+                </div>
+
+                <div class="icono">
+                    <i class="fa-solid fa-fingerprint"></i>
+                </div>
+
+                
+
+                <h3>6.º Año</h3>
+
+                <p>
+                    Sistema de control de acceso mediante RFID y Arduino.
+                </p>
+
+
+            
+                <button onclick="mostrarProyecto('sexto')">
+                    Ver proyecto
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= DETALLE DEL PROYECTO ================= -->
+
+        <section id="detalle-proyecto" class="detalle">
+
+            <div class="detalle-contenido">
+
+                <button class="cerrar" onclick="cerrarProyecto()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <span id="detalle-etiqueta"></span>
+
+                <h2 id="detalle-titulo"></h2>
+
+                <p id="detalle-descripcion"></p>
+
+                <div id="detalle-contenido"></div>
+
+            </div>
+
+        </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>
+            Seguinos en nuestras redes
+        </h2>
+
+        <div class="redes">
+
+            <a href="https://www.whatsapp.com"
+               target="_blank"
+               class="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.instagram.com/departamentosistemas"
+               target="_blank"
+               class="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com"
+               target="_blank"
+               class="tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.facebook.com"
+               target="_blank"
+               class="facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+        </div>
+
+        <p>
+            © Todos los derechos reservados
+        </p>
+
+    </footer>
+
+
+    <script src="proyecto.js"></script>
+
+</body>
+</html>
+
