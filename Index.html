@@ -1,101 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Tu Nombre">
-    <meta name="description" content="descripcion de tu sitio">
-    <meta name="keywords" content="palabras, clave, relacionadas, con, tu, sitio">
+    <meta name="description" content="Sitio web interactivo de robótica y tecnología">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica y Tecnología</title>
+
+    <!-- Fuente moderna 'Inter' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="img/30Sep24 Anis Robot Free Upload.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Practica</title>
 </head>
 <body>
 
-  <!-- Burbuja flotante -->
-  <button id="bubble" onclick="toggleChat()">🤖
-    <span id="notif"></span>
-  </button>
+  <!-- Burbuja flotante del Chatbot -->
+  <button id="bubble" onclick="toggleChat()" aria-label="Abrir asistente de chat">🤖</button>
 
-  <!-- Panel del chat -->
+  <!-- Panel del Chatbot -->
   <div id="panel">
     <div class="chat-header">
-      <span>🤖 Chatbot</span>
-      <button class="close-btn" onclick="toggleChat()">✕</button>
+      <span>🤖 Asistente de Robótica</span>
+      <button class="close-btn" onclick="toggleChat()" aria-label="Cerrar chat">✕</button>
     </div>
 
     <div id="chat">
-      <div class="mensaje bot">¡Hola! Preguntame sobre la robotica 😊</div>
+      <div class="mensaje bot">¡Hola! 🤖 Soy tu asistente de robótica. Pregúntame lo que necesites.</div>
     </div>
 
     <div class="input-area">
-      <input id="input" type="text" placeholder="Escribí algo..." onkeydown="if(event.key==='Enter') enviar()">
+      <input id="input" type="text" placeholder="Escribe un mensaje..." onkeydown="if(event.key==='Enter') enviar()">
       <button onclick="enviar()">Enviar</button>
     </div>
   </div>
 
+  <!-- Navegación -->
   <nav>
-    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Logo Robótica">
     <ul>
       <li><a href="Index.html">Inicio</a></li>
-      <li><a href="Menu de nav/robotica.html">Robotica</a></li>
+      <li><a href="Menu de nav/robotica.html">Robótica</a></li>
       <li><a href="Menu de nav/Proyecto.html">Proyecto</a></li>
       <li><a href="Menu de nav/contacto.html">Contacto</a></li>
+      <!-- BOTÓN DE MODO OSCURO -->
+      <li><button id="btn-tema" class="btn-tema">🌙 Modo Oscuro</button></li>
     </ul>
   </nav>
 
-  <!-- CARDS -->
-  <section class="cards">
-    <div class="card">
-      <img src="img/robotica.jpg" alt="">
-      <h3>¿Qué es la Robótica?</h3>
-      <p>La robótica es una rama de la tecnología que diseña y construye robots para automatizar tareas y mejorar la vida humana.</p>
-      <button>Leer más</button>
-    </div>
+  <!-- Contenido principal -->
+  <main>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f" alt="">
-      <h3>Aplicaciones</h3>
-      <p>Se utiliza en la industria, medicina, educación y exploración espacial, facilitando procesos complejos.</p>
-      <button>Leer más</button>
-    </div>
+    <!-- 1. CARRUSEL -->
+    <section class="carousel">
+      <div class="carousel-container">
+        <img src="img/modelo 1.jpg" class="slide active" alt="Modelo 1">
+        <img src="img/Modelo 2.jfif" class="slide" alt="Modelo 2">
+        <img src="img/modelo 3.jpg" class="slide" alt="Modelo 3">
+      </div>
 
-    <div class="card">
-      <img src="img/futuro.jpg" alt="">
-      <h3>Futuro</h3>
-      <p>La robótica avanza con inteligencia artificial, creando máquinas más autónomas e inteligentes.</p>
-      <button>Leer más</button>
-    </div>
-  </section>
+      <button class="prev" aria-label="Anterior">&#10094;</button>
+      <button class="next" aria-label="Siguiente">&#10095;</button>
 
-  <!-- CARRUSEL -->
-  <section class="carousel">
-    <div class="carousel-container">
-      <img src="img/modelo 1.jpg" class="slide active">
-      <img src="img/Modelo 2.jfif" class="slide">
-      <img src="img/modelo 3.jpg" class="slide">
-    </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
 
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+    <!-- 2. TARJETAS (CARDS) DEBAJO DEL CARRUSEL -->
+    <section class="cards">
+      <article class="card">
+        <img src="img/robotica.jpg" alt="¿Qué es la Robótica?">
+        <h3>¿Qué es la Robótica?</h3>
+        <p>La robótica es una rama de la tecnología que diseña y construye robots para automatizar tareas y mejorar la vida humana.</p>
+        <button>Leer más</button>
+      </article>
 
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f" alt="Aplicaciones de la Robótica">
+        <h3>Aplicaciones</h3>
+        <p>Se utiliza en la industria, medicina, educación y exploración espacial, optimizando procesos complejos.</p>
+        <button>Leer más</button>
+      </article>
 
-  <!-- FOOTER -->
+      <article class="card">
+        <img src="img/futuro.jpg" alt="El Futuro de la Robótica">
+        <h3>Futuro</h3>
+        <p>La robótica avanza junto a la inteligencia artificial, creando máquinas más autónomas, eficientes e inteligentes.</p>
+        <button>Leer más</button>
+      </article>
+    </section>
+
+    <!-- 3. BANNER DE CONTACTO (AHORA DEBAJO DE LAS CARDS) -->
+    <section class="cta-banner">
+      <div class="cta-info">
+        <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+        </svg>
+        <div class="cta-text">
+          <h3>MEDIOS DE COMUNICACIÓN</h3>
+          <p>Contacta con nuestro departamento de comunicación o solicita material adicional.</p>
+        </div>
+      </div>
+      <a href="Menu de nav/contacto.html" class="cta-button">CONTACTO</a>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
   <footer>
     <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="logo">
     <p>© 2026 Todos los derechos reservados</p>
     <p>Teléfono: +54 11265444906</p>
     <p>Email: neulautaroramon@colegiomanoamiga.edu.ar</p>
-    <p>Información de contacto: Pilar, Buenos Aires, Argentina</p>
+    <p>Pilar, Buenos Aires, Argentina</p>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
