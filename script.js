@@ -83,3 +83,19 @@ if (btnTema) {
     }
   });
 }
+
+// Formulario de contacto: muestra una confirmacion sin recargar la pagina.
+const contactForm = document.getElementById('contact-form');
+const contactStatus = document.getElementById('contact-status');
+
+if (contactForm && contactStatus) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    const nombre = formData.get('nombre');
+
+    contactStatus.textContent = `Gracias, ${nombre}. Recibimos tu mensaje y te responderemos pronto.`;
+    contactStatus.classList.add('visible');
+    contactForm.reset();
+  });
+}

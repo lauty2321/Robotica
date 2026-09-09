@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con el equipo de Robótica y Tecnología">
+    <title>Contacto | Robótica y Tecnología</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <a href="../Index.html" aria-label="Volver al inicio">
+            <img src="../img/30Sep24 Anis Robot Free Upload.png" alt="Logo Robótica">
+        </a>
+        <ul>
+            <li><a href="../Index.html">Inicio</a></li>
+            <li><a href="robotica.html">Robótica</a></li>
+            <li><a href="Proyecto.html">Proyecto</a></li>
+            <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            <li><button id="btn-tema" class="btn-tema">🌙 Modo Oscuro</button></li>
+        </ul>
+    </nav>
+
+    <main class="detail-page contact-page">
+        <h1>Contacta con nosotros</h1>
+        <p>¿Tienes una pregunta, una propuesta o quieres conocer más sobre robótica? Completa el formulario y nos pondremos en contacto contigo.</p>
+
+        <form id="contact-form" class="contact-form">
+            <label for="nombre">
+                Nombre
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+            </label>
+
+            <label for="email">
+                Correo electrónico
+                <input id="email" name="email" type="email" autocomplete="email" required>
+            </label>
+
+            <label for="mensaje">
+                Mensaje
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </label>
+
+            <button class="contact-submit" type="submit">Enviar mensaje</button>
+            <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="contact-details">También puedes escribir a <a href="mailto:neulautaroramon@colegiomanoamiga.edu.ar">neulautaroramon@colegiomanoamiga.edu.ar</a> o llamar al <a href="tel:+5411265444906">+54 11265444906</a>.</p>
+    </main>
+
+    <footer>
+        <img src="../img/30Sep24 Anis Robot Free Upload.png" alt="Logo">
+        <p>© 2026 Todos los derechos reservados</p>
+        <p>Robótica y Tecnología</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

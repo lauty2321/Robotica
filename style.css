@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #F8FAFC;
@@ -287,7 +291,8 @@ body.modo-oscuro .carousel {
   transition: color 0.3s ease;
 }
 
-.card button {
+.card button,
+.card-button {
   margin: 18px auto;
   padding: 9px 22px;
   background: #3B82F6;
@@ -300,8 +305,187 @@ body.modo-oscuro .carousel {
   transition: background-color 0.2s ease;
 }
 
-.card button:hover {
+.card-button {
+  text-decoration: none;
+}
+
+.card button:hover,
+.card-button:hover {
   background: #2563EB;
+}
+
+/* ── PÁGINAS DE APLICACIONES ────────────────────────────────── */
+.page-heading {
+  max-width: 980px;
+  margin: 52px auto 34px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.page-heading h1 {
+  color: #1E2A38;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.page-heading p {
+  color: #4B5563;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.application-cards {
+  align-items: stretch;
+  padding-bottom: 64px;
+}
+
+.application-card {
+  min-height: 360px;
+}
+
+.application-card h3 {
+  color: #1E2A38;
+}
+
+.application-card .card-button {
+  margin-top: auto;
+}
+
+.application-card.no-link {
+  justify-content: flex-start;
+}
+
+.application-card.no-link p {
+  margin-bottom: 18px;
+}
+
+.detail-page {
+  max-width: 980px;
+  margin: 52px auto 64px;
+  padding: 0 24px;
+}
+
+.detail-page h1 {
+  color: #1E2A38;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 14px;
+}
+
+.detail-page h2 {
+  color: #2563EB;
+  margin: 30px 0 10px;
+}
+
+.detail-page p {
+  max-width: 760px;
+  color: #4B5563;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 28px;
+  color: #2563EB;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-page {
+  max-width: 760px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 28px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  color: #1E2A38;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  font: inherit;
+  color: #1E293B;
+  background: #F8FAFC;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #60A5FA;
+  border-color: #3B82F6;
+}
+
+.contact-submit {
+  justify-self: start;
+  padding: 10px 22px;
+  background: #3B82F6;
+  color: #FFFFFF;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.contact-submit:hover {
+  background: #2563EB;
+}
+
+.contact-status {
+  display: none;
+  margin: 0;
+  color: #166534;
+  font-weight: 600;
+}
+
+.contact-status.visible {
+  display: block;
+}
+
+body.modo-oscuro .contact-form {
+  background: #1E293B;
+  border-color: #334155;
+}
+
+body.modo-oscuro .contact-form label {
+  color: #F8FAFC;
+}
+
+body.modo-oscuro .contact-form input,
+body.modo-oscuro .contact-form textarea {
+  background: #0F172A;
+  color: #F8FAFC;
+  border-color: #475569;
+}
+
+body.modo-oscuro .page-heading h1,
+body.modo-oscuro .detail-page h1,
+body.modo-oscuro .application-card h3 {
+  color: #F8FAFC;
+}
+
+body.modo-oscuro .page-heading p,
+body.modo-oscuro .detail-page p {
+  color: #CBD5E1;
 }
 
 /* ── 3. BANNER DE CONTACTO ───────────────────────────────────── */
@@ -530,4 +714,26 @@ footer p {
   color: #FFFFFF;
   font-weight: 600;
   font-size: 12.5px;
+}
+
+@media (max-width: 700px) {
+  nav {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  nav ul {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .carousel-container {
+    height: 280px;
+  }
+
+  .application-card {
+    min-height: 0;
+  }
 }
