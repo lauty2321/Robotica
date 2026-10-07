@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robótica Aplicada a la Industria</title>
+<meta name="description" content="Proyecto sobre cómo la robótica transforma la industria mediante automatización, precisión, seguridad, eficiencia y nuevas tecnologías.">
+<meta name="theme-color" content="#3B82C4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<a class="saltar" href="#inicio">Saltar al contenido</a>
+
+<header class="barra" id="barra">
+  <div class="cont barra__int">
+
+    <a class="marca" href="#inicio" aria-label="Robótica Industrial, inicio">
+      <svg class="marca__icono" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect x="9" y="13" width="16" height="12" rx="4" stroke="currentColor" stroke-width="2"/>
+        <circle cx="14" cy="19" r="1.6" fill="currentColor"/>
+        <circle cx="20" cy="19" r="1.6" fill="currentColor"/>
+        <path d="M17 13V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="17" cy="6.5" r="1.8" stroke="currentColor" stroke-width="2"/>
+        <path d="M9 18H5M25 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Robótica Industrial</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#que-es">¿Qué es?</a>
+      <a href="#aplicaciones">Aplicaciones</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#futuro">Futuro</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="barra__acciones">
+      <button class="tema-btn" id="temaBtn" type="button" aria-pressed="false" aria-label="Cambiar a modo oscuro">🌙</button>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+
+<section class="hero" id="inicio">
+  <div class="cont hero__grid">
+
+    <div class="reveal">
+      <p class="etiqueta">Proyecto sobre robótica industrial</p>
+
+      <h1>Robótica Aplicada a la Industria</h1>
+
+      <p class="hero__sub">
+        Automatizar, producir y transformar mediante tecnología.
+      </p>
+
+      <p class="hero__texto">
+        La robótica industrial permite automatizar diferentes procesos de producción mediante máquinas programables capaces de realizar tareas con precisión, velocidad y repetitividad. En esta página mostramos cómo los robots están transformando las fábricas y distintos sectores industriales.
+      </p>
+
+      <div class="hero__botones">
+        <a class="btn btn--lleno" href="#que-es">Conocer el proyecto</a>
+        <a class="btn btn--linea" href="#aplicaciones">Ver aplicaciones</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <!-- Reemplazar por una foto real de un robot industrial -->
+      <figure class="marco-imagen marco-imagen--grande">
+        <img class="foto-real" src="imagen-principal.jpg" alt="Robot industrial trabajando en una línea de producción">
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<section class="seccion" id="que-es">
+  <div class="cont seccion__grid seccion__grid--textoimagen">
+
+    <div class="reveal">
+      <p class="kicker">¿Qué es?</p>
+
+      <h2>¿Qué es la robótica industrial?</h2>
+
+      <p>
+        La robótica industrial es una rama de la tecnología que utiliza robots programables para realizar tareas dentro de procesos de fabricación y producción.
+      </p>
+
+      <p>
+        Estos sistemas pueden encargarse de actividades como soldadura, montaje, pintura, manipulación de materiales, empaquetado y control de calidad. Su principal objetivo es aumentar la productividad, mejorar la precisión y facilitar tareas que pueden ser repetitivas o peligrosas para las personas.
+      </p>
+
+      <blockquote class="cita-destacada">
+        La robótica industrial combina máquinas, programación, sensores y personas para hacer más eficientes los procesos de producción.
+      </blockquote>
+    </div>
+
+    <div class="reveal">
+      <figure class="marco-imagen">
+        <img class="foto-real" src="imagen-robotica-industrial.jpg" alt="Robot industrial utilizado en una fábrica">
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="seccion seccion--alt" id="aplicaciones">
+
+  <div class="cont">
+
+    <div class="titulo reveal">
+      <p class="kicker">Aplicaciones</p>
+
+      <h2>Robótica en diferentes industrias</h2>
+
+      <p>
+        Los robots industriales pueden utilizarse en numerosos sectores para automatizar procesos, aumentar la productividad y mejorar las condiciones de trabajo.
+      </p>
+    </div>
+
+    <div class="tarjetas tarjetas--3 reveal">
+
+      <article class="tarjeta">
+
+        <span class="icono-caja">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 18h16M6 18V9h12v9M9 9V5h6v4" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </span>
+
+        <h3>Industria automotriz</h3>
+
+        <p>
+          Los robots participan en soldadura, pintura, montaje de piezas y manipulación de componentes en la fabricación de vehículos.
+        </p>
+
+        <div class="marco-imagen marco-imagen--chica">
+          <img class="foto-real" src="industria-automotriz.jpg" alt="Robots trabajando en la industria automotriz">
+        </div>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <span class="icono-caja">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+        <h3>Industria alimentaria</h3>
+
+        <p>
+          Se utilizan robots para clasificar, transportar, empaquetar y organizar productos dentro de las plantas de producción.
+        </p>
+
+        <div class="marco-imagen marco-imagen--chica">
+          <img class="foto-real" src="industria-alimentaria.jpg" alt="Robot trabajando en una industria alimentaria">
+        </div>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <span class="icono-caja">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 19V7l7-4 7 4v12" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 19v-5h6v5M8 9h.01M12 9h.01M16 9h.01" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </span>
+
+        <h3>Industria electrónica</h3>
+
+        <p>
+          Los robots pueden realizar tareas de ensamblaje, manipulación de componentes pequeños y control de calidad con gran precisión.
+        </p>
+
+        <div class="marco-imagen marco-imagen--chica">
+          <img class="foto-real" src="industria-electronica.jpg" alt="Robots utilizados en la fabricación de componentes electrónicos">
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="seccion" id="asistencia">
+
+  <div class="cont seccion__grid seccion__grid--textoimagen seccion__grid--invertido">
+
+    <div class="reveal">
+
+      <p class="kicker">Un ejemplo real</p>
+
+      <h2>Una línea de producción automatizada</h2>
+
+      <p>
+        En una fábrica, diferentes robots pueden trabajar dentro de una misma línea de producción. Cada máquina recibe instrucciones específicas y utiliza sensores para realizar una tarea determinada.
+      </p>
+
+      <p>
+        Por ejemplo, un producto puede ser transportado por una cinta, identificado por un sensor, manipulado por un robot y finalmente enviado a una estación de control de calidad.
+      </p>
+
+      <ul class="lista-check">
+        <li>Automatizar tareas repetitivas</li>
+        <li>Aumentar la precisión</li>
+        <li>Mejorar la productividad</li>
+        <li>Reducir tiempos de producción</li>
+        <li>Mejorar la seguridad laboral</li>
+      </ul>
+
+      <div class="flujo" role="img" aria-label="Proceso industrial automatizado">
+
+        <span class="flujo__paso">Materia prima</span>
+
+        <span class="flujo__flecha" aria-hidden="true">→</span>
+
+        <span class="flujo__paso">Robot</span>
+
+        <span class="flujo__flecha" aria-hidden="true">→</span>
+
+        <span class="flujo__paso">Control</span>
+
+        <span class="flujo__flecha" aria-hidden="true">→</span>
+
+        <span class="flujo__paso">Producto terminado</span>
+
+      </div>
+
+    </div>
+
+    <div class="reveal">
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="imagen-linea-produccion.jpg" alt="Línea de producción industrial automatizada">
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="seccion seccion--alt" id="beneficios">
+
+  <div class="cont">
+
+    <div class="titulo reveal">
+
+      <p class="kicker">Beneficios</p>
+
+      <h2>¿Qué aporta la robótica a la industria?</h2>
+
+      <p>
+        La incorporación de robots puede modificar la forma en que se organizan los procesos industriales y permitir que las personas se concentren en tareas de supervisión, programación, mantenimiento y toma de decisiones.
+      </p>
+
+    </div>
+
+    <div class="tarjetas tarjetas--3 tarjetas--compactas reveal">
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">⚙️</span>
+
+        <h3>Mayor precisión</h3>
+
+        <p>
+          Los robots pueden repetir movimientos con gran exactitud.
+        </p>
+
+      </article>
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">⏱️</span>
+
+        <h3>Mayor productividad</h3>
+
+        <p>
+          Permiten automatizar procesos y trabajar de manera continua.
+        </p>
+
+      </article>
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">🛡️</span>
+
+        <h3>Seguridad</h3>
+
+        <p>
+          Pueden realizar tareas peligrosas o difíciles para una persona.
+        </p>
+
+      </article>
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">🔧</span>
+
+        <h3>Automatización</h3>
+
+        <p>
+          Las tareas repetitivas pueden ser realizadas automáticamente.
+        </p>
+
+      </article>
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">💻</span>
+
+        <h3>Programación</h3>
+
+        <p>
+          Los robots pueden ser programados para realizar diferentes procesos.
+        </p>
+
+      </article>
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">📊</span>
+
+        <h3>Control de calidad</h3>
+
+        <p>
+          Sensores y sistemas automatizados pueden ayudar a detectar errores.
+        </p>
+
+      </article>
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">🔄</span>
+
+        <h3>Repetitividad</h3>
+
+        <p>
+          Un robot puede ejecutar una misma secuencia muchas veces.
+        </p>
+
+      </article>
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">📦</span>
+
+        <h3>Logística</h3>
+
+        <p>
+          Los robots pueden transportar y organizar materiales y productos.
+        </p>
+
+      </article>
+
+      <article class="tarjeta tarjeta--chica">
+
+        <span class="icono-caja icono-caja--chica">🧠</span>
+
+        <h3>Innovación</h3>
+
+        <p>
+          La robótica impulsa nuevas formas de diseñar y producir.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="seccion" id="actividades">
+
+  <div class="cont">
+
+    <div class="titulo reveal">
+
+      <p class="kicker">En la práctica</p>
+
+      <h2>¿Qué pueden hacer los robots industriales?</h2>
+
+    </div>
+
+    <ul class="chips reveal">
+
+      <li>Soldar piezas</li>
+      <li>Pintar componentes</li>
+      <li>Armar productos</li>
+      <li>Transportar materiales</li>
+      <li>Clasificar objetos</li>
+      <li>Empaquetar productos</li>
+      <li>Controlar calidad</li>
+      <li>Manipular materiales</li>
+
+    </ul>
+
+    <div class="mini-galeria reveal">
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="imagen-robotica-1.jpg" alt="Robot industrial realizando una tarea de producción">
+      </figure>
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="imagen-robotica-2.jpg" alt="Robot industrial soldando una pieza">
+      </figure>
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="imagen-robotica-3.jpg" alt="Robot industrial manipulando materiales">
+      </figure>
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="imagen-robotica-4.jpg" alt="Robots trabajando en una fábrica">
+      </figure>
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="imagen-robotica-5.jpg" alt="Sistema robotizado de producción">
+      </figure>
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="imagen-robotica-6.jpg" alt="Robot industrial en una línea de producción">
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="seccion seccion--alt" id="futuro">
+
+  <div class="cont">
+
+    <div class="titulo reveal">
+
+      <p class="kicker">Futuro</p>
+
+      <h2>Tecnologías que están transformando la industria</h2>
+
+    </div>
+
+    <div class="tarjetas tarjetas--4 reveal">
+
+      <article class="tarjeta">
+
+        <span class="icono-caja">🤖</span>
+
+        <h3>Inteligencia artificial</h3>
+
+        <p>
+          La IA permite desarrollar sistemas capaces de analizar información y adaptarse a diferentes situaciones.
+        </p>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <span class="icono-caja">📡</span>
+
+        <h3>Internet de las cosas</h3>
+
+        <p>
+          Sensores y dispositivos conectados permiten recopilar información de las máquinas y procesos.
+        </p>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <span class="icono-caja">🕶️</span>
+
+        <h3>Simulación y realidad virtual</h3>
+
+        <p>
+          Permiten diseñar y probar procesos industriales antes de implementarlos físicamente.
+        </p>
+
+      </article>
+
+      <article class="tarjeta">
+
+        <span class="icono-caja">🦾</span>
+
+        <h3>Robots colaborativos</h3>
+
+        <p>
+          Los robots colaborativos están diseñados para trabajar junto a las personas en determinadas tareas.
+        </p>
+
+      </article>
+
+    </div>
+
+    <div class="futuro-destacado reveal">
+
+      <div>
+
+        <h3>La industria del futuro</h3>
+
+        <p>
+          La combinación de robótica, inteligencia artificial, sensores, datos y automatización está impulsando nuevas formas de producción. El objetivo es desarrollar fábricas más conectadas, flexibles y capaces de responder a diferentes necesidades.
+        </p>
+
+      </div>
+
+      <figure class="marco-imagen">
+
+        <img class="foto-real" src="imagen-futuro.jpg" alt="Tecnología robótica aplicada a la industria del futuro">
+
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="seccion" id="galeria">
+
+  <div class="cont">
+
+    <div class="titulo reveal">
+
+      <p class="kicker">Galería</p>
+
+      <h2>Robótica industrial en acción</h2>
+
+      <p>
+        Reemplazá cada imagen por una foto real de robots y procesos industriales.
+      </p>
+
+    </div>
+
+    <div class="galeria reveal">
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="galeria-1.jpg" alt="Robot industrial trabajando">
+      </figure>
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="galeria-2.jpg" alt="Robot realizando soldadura">
+      </figure>
+
+      <figure class="marco-imagen">
+        <img class="foto-real" src="galeria-3.jpg" alt="Robots en una línea de producción">
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="seccion seccion--alt" id="interactivo">
+
+  <div class="cont">
+
+    <div class="titulo reveal">
+
+      <h2>¿Qué función cumple un robot?</h2>
+
+      <p>
+        Elegí una opción para conocer cómo se aplica en la industria.
+      </p>
+
+    </div>
+
+    <div class="interactivo reveal">
+
+      <div class="interactivo__botones" role="group" aria-label="Elegir una función">
+
+        <button type="button" class="chip-btn" data-habilidad="soldadura">
+          Soldadura
+        </button>
+
+        <button type="button" class="chip-btn" data-habilidad="montaje">
+          Montaje
+        </button>
+
+        <button type="button" class="chip-btn" data-habilidad="transporte">
+          Transporte
+        </button>
+
+        <button type="button" class="chip-btn" data-habilidad="calidad">
+          Control de calidad
+        </button>
+
+        <button type="button" class="chip-btn" data-habilidad="empaque">
+          Empaquetado
+        </button>
+
+      </div>
+
+      <p class="interactivo__respuesta" id="respuestaHabilidad" aria-live="polite">
+        Elegí una función para ver su explicación acá.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="seccion" id="contacto">
+
+  <div class="cont seccion__grid">
+
+    <div class="reveal">
+
+      <p class="kicker">Contacto</p>
+
+      <h2>Datos del proyecto</h2>
+
+      <ul class="lista-info">
+
+        <li>
+          <b>Proyecto</b>
+          <span>Robótica Aplicada a la Industria</span>
+        </li>
+
+        <li>
+          <b>Institución</b>
+          <span>Completar con el nombre de la escuela</span>
+        </li>
+
+        <li>
+          <b>Integrantes</b>
+          <span>Completar con los nombres del grupo</span>
+        </li>
+
+        <li>
+          <b>Docentes a cargo</b>
+          <span>Completar con los nombres de los docentes</span>
+        </li>
+
+        <li>
+          <b>Email</b>
+          <span>
+            <a href="mailto:robotica.industrial@escuela.edu.ar">
+              robotica.industrial@escuela.edu.ar
+            </a>
+          </span>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <form class="formulario reveal" id="formularioContacto" novalidate>
+
+      <div class="campo">
+
+        <label for="nombre">Nombre</label>
+
+        <input type="text" id="nombre" name="nombre" autocomplete="name">
+
+        <span class="campo__error" id="errorNombre"></span>
+
+      </div>
+
+      <div class="campo">
+
+        <label for="email">Email</label>
+
+        <input type="email" id="email" name="email" autocomplete="email">
+
+        <span class="campo__error" id="errorEmail"></span>
+
+      </div>
+
+      <div class="campo">
+
+        <label for="mensaje">Mensaje</label>
+
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+        <span class="campo__error" id="errorMensaje"></span>
+
+      </div>
+
+      <button class="btn btn--lleno" type="submit">
+        Enviar
+      </button>
+
+      <p class="formulario__estado" id="estadoFormulario" role="status"></p>
+
+    </form>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer class="pie">
+
+  <div class="cont pie__grid">
+
+    <div>
+
+      <p class="pie__marca">
+        Robótica Aplicada a la Industria
+      </p>
+
+      <p>
+        Tecnología, automatización e innovación para transformar la producción.
+      </p>
+
+    </div>
+
+    <nav aria-label="Enlaces del pie de página">
+
+      <h4>Inicio</h4>
+
+      <a href="#inicio">
+        Volver arriba
+      </a>
+
+    </nav>
+
+    <nav aria-label="Secciones">
+
+      <h4>Secciones</h4>
+
+      <a href="#que-es">¿Qué es?</a>
+
+      <a href="#aplicaciones">Aplicaciones</a>
+
+      <a href="#beneficios">Beneficios</a>
+
+      <a href="#futuro">Futuro</a>
+
+    </nav>
+
+    <nav aria-label="Galería y contacto">
+
+      <h4>Más</h4>
+
+      <a href="#galeria">Galería</a>
+
+      <a href="#contacto">Contacto</a>
+
+    </nav>
+
+  </div>
+
+  <p class="pie__nota">
+    Proyecto educativo sobre robótica industrial.
+  </p>
+
+</footer>
+
+<script src="javascript.js"></script>
+
+</body>
+</html>
