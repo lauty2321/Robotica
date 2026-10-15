@@ -1,0 +1,126 @@
+/* ═══════════════════════════════════════════════════════════════
+   RMAsm · Modo oscuro + marca compartida para las páginas internas
+   (Proyecto.html y contacto.html). Se carga DESPUÉS del css propio
+   de cada página para poder sobreescribir sus colores.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── MARCA EN EL NAV ─────────────────────────────────────────── */
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.marca img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(79, 168, 255, 0.55));
+  transition: transform 0.35s ease;
+}
+
+.marca:hover img { transform: scale(1.12) rotate(-6deg); }
+
+.marca-texto { display: flex; flex-direction: column; line-height: 1.1; }
+
+.marca-nombre {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.marca-nombre span {
+  background: linear-gradient(90deg, #35d6ff, #4fa8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marca-sub {
+  font-size: 10px;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #8fa8cf;
+  font-weight: 600;
+}
+
+/* ── BOTÓN MODO OSCURO ───────────────────────────────────────── */
+.btn-tema {
+  background-color: transparent;
+  color: #d8e4f7;
+  border: 1px solid #4fa8ff;
+  padding: 7px 15px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.btn-tema:hover {
+  background-color: #4fa8ff;
+  color: #08152c;
+  transform: translateY(-2px);
+}
+
+/* ── MODO OSCURO GENÉRICO ────────────────────────────────────── */
+body.modo-oscuro {
+  background: #070c1a !important;
+  color: #f1f6ff;
+}
+
+body.modo-oscuro .container,
+body.modo-oscuro main,
+body.modo-oscuro section,
+body.modo-oscuro header:not(nav) {
+  background-color: transparent;
+}
+
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro h4 { color: #f1f6ff; }
+
+body.modo-oscuro p,
+body.modo-oscuro li,
+body.modo-oscuro label,
+body.modo-oscuro summary,
+body.modo-oscuro .intro { color: #9db0d0; }
+
+body.modo-oscuro nav { background: rgba(6, 11, 24, 0.95) !important; }
+
+/* Tarjetas / cajas / formularios */
+body.modo-oscuro .card,
+body.modo-oscuro .tarjeta,
+body.modo-oscuro .anio,
+body.modo-oscuro .caja,
+body.modo-oscuro .formulario,
+body.modo-oscuro .info,
+body.modo-oscuro .faq,
+body.modo-oscuro details,
+body.modo-oscuro .proyecto,
+body.modo-oscuro article {
+  background-color: #131f38 !important;
+  border-color: #243352 !important;
+  color: #f1f6ff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+body.modo-oscuro input,
+body.modo-oscuro textarea,
+body.modo-oscuro select {
+  background-color: #0f1a30 !important;
+  border-color: #243352 !important;
+  color: #f1f6ff !important;
+}
+
+body.modo-oscuro input::placeholder,
+body.modo-oscuro textarea::placeholder { color: #64789a; }
+
+body.modo-oscuro .iconos i { color: #4b95ff; }
+
+body.modo-oscuro footer { background: linear-gradient(160deg, #05080f, #0a2a5e) !important; }
