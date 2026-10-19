@@ -404,6 +404,22 @@ nav ul li a:hover::after { width: 100%; }
   background: #005ecc;
 }
 
+.card-button {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  background: var(--azul-oscuro);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.card-button:hover {
+  background: #005ecc;
+}
+
 /* ── CARRUSEL ────────────────────────────────────────────────── */
 .carousel {
   position: relative;

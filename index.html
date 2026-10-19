@@ -56,12 +56,14 @@
       </span>
     </a>
 
-    <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">☰</button>
+    <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav">☰</button>
 
     <ul id="menu-nav">
-      <li><a href="Index.html">Inicio</a></li>
+      <li><a href="Index.html" aria-current="page">Inicio</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="robotica.html">Robótica</a></li>
+      <li><a href="robotica.html">Robótica</a></li>
+      <li><a href="aplicaciones.html">Aplicaciones</a></li>
+      <li><a href="Proyecto.html">Proyecto</a></li>
       <li><a href="contacto.html">Contacto</a></li>
       <li>
         <button id="btn-tema" class="btn-tema">🌙 Modo Oscuro</button>
@@ -97,13 +99,13 @@
   <!-- CARDS -->
    <section class="carousel">
     <div class="carousel-container">
-      <img src="img/modelo 1.jpg" class="slide active">
-      <img src="img/modelo 2.jpg" class="slide">
-      <img src="img/modelo 3.jpg" class="slide">
+      <img src="img/modelo 1.jpg" class="slide active" alt="Modelo de robot 1">
+      <img src="img/modelo 2.jpg" class="slide" alt="Modelo de robot 2">
+      <img src="img/modelo 3.jpg" class="slide" alt="Modelo de robot 3">
     </div>
 
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+    <button class="prev" aria-label="Imagen anterior">&#10094;</button>
+    <button class="next" aria-label="Imagen siguiente">&#10095;</button>
 
     <div class="dots">
       <span class="dot active"></span>
@@ -112,26 +114,26 @@
     </div>
   </section>
 
-  <section class="cards">
+  <section class="cards" id="cards">
     <div class="card">
-      <img src="img/robotica.jpg" alt="">
+      <img src="img/robotica.jpg" alt="Robot">
       <h3>¿Qué es la Robótica?</h3>
       <p>La robótica es una rama de la tecnología que diseña y construye robots para automatizar tareas y mejorar la vida humana.</p>
-      <button>Leer más</button>
+      <a class="card-button" href="pagrobotica/index.html#que-es">Leer más</a>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f" alt="">
+      <img src="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?w=800&q=80" alt="Robot industrial">
       <h3>Aplicaciones</h3>
       <p>Se utiliza en la industria, medicina, educación y exploración espacial, facilitando procesos complejos.</p>
-       <li><a href="aplicaciones.html">Leer más</a></li>
+      <a class="card-button" href="aplicaciones.html">Leer más</a>
     </div>
 
     <div class="card">
-      <img src="img/futuro.jpg" alt="">
+      <img src="img/futuro.jpg" alt="El futuro de la robótica">
       <h3>Futuro</h3>
       <p>La robótica avanza con inteligencia artificial, creando máquinas más autónomas e inteligentes.</p>
-      <button>Leer más</button>
+      <a class="card-button" href="pagrobotica/index.html#inteligencia">Leer más</a>
     </div>
   </section>
 
@@ -140,16 +142,16 @@
 
   <!-- FOOTER -->
        <footer>
-            <h2>Seguinos en nuetras redes</h2>
+            <h2>Seguinos en nuestras redes</h2>
 
             <div class="redes">
-                <a href="https://www.whatsapp.com" target="_blank" class= "whatsapp">
+                <a href="https://www.whatsapp.com" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/departamentosistemas?igsi=MXgxem16ZHRra3QwbA%3D%3D"target="_blank" class= "instagram">
+                <a href="https://www.instagram.com/departamentosistemas?igsi=MXgxem16ZHRra3QwbA%3D%3D" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com"target="_blank" class= "tiktok">
+                <a href="https://www.tiktok.com" target="_blank" rel="noopener" class="tiktok" aria-label="TikTok">
                     <i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.facebook.com"target="_blank" class= "facebook">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" class="facebook" aria-label="Facebook">
                     <i class="fa-brands fa-facebook"></i></a>
             </div>
 

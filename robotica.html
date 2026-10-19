@@ -9,19 +9,20 @@
 <body>
     <nav>
         <a href="Index.html" aria-label="Volver al inicio"><img src="img/rmasm-avatar.png" alt="Logo Robótica"></a>
-        <ul>
+        <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav">☰</button>
+        <ul id="menu-nav">
             <li><a href="Index.html">Inicio</a></li>
             <li><a href="robotica.html" aria-current="page">Robótica</a></li>
+            <li><a href="aplicaciones.html">Aplicaciones</a></li>
             <li><a href="Proyecto.html">Proyecto</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><button id="btn-tema" class="btn-tema">🌙 Modo Oscuro</button></li>
-            <li><a href="aplicaciones.html">Aplicaciones</a></li>
-            <li><a href="exploracion-espacial.html">Exploración espacial</a></li>
         </ul>
     </nav>
     <main class="detail-page">
         <h1>Robótica</h1>
         <p>La robótica combina mecánica, electrónica y programación para diseñar máquinas capaces de ayudar a las personas y realizar tareas de forma autónoma o asistida.</p>
+        <a class="back-link" href="pagrobotica/index.html">Leer todo sobre robótica →</a>
     </main>
     <footer><img src="img/rmasm-avatar.png" alt="Logo"><p>© 2026 Todos los derechos reservados</p><p>Robótica y Tecnología</p></footer>
     <script src="script.js"></script>

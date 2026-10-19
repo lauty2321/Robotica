@@ -1,7 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
    RMAsm · Robótica Mano Amiga
-   1. Modo oscuro   2. Menú móvil   3. Carrusel de imágenes
-   4. Carrusel de cards con tiempo de espera   5. Chatbot
+   1. Modo oscuro   2. Menú móvil   3. Carrusel de imágenes   4. Chatbot
    ═══════════════════════════════════════════════════════════════ */
 
 /* ════════════ 1. MODO OSCURO / CLARO ════════════ */
@@ -36,8 +35,10 @@ const menuNav = document.getElementById('menu-nav');
 
 if (hamburguesa && menuNav) {
   hamburguesa.addEventListener('click', () => {
-    menuNav.classList.toggle('abierto');
-    hamburguesa.innerHTML = menuNav.classList.contains('abierto') ? '✕' : '☰';
+    const abierto = menuNav.classList.toggle('abierto');
+    hamburguesa.innerHTML = abierto ? '✕' : '☰';
+    hamburguesa.setAttribute('aria-expanded', abierto);
+    hamburguesa.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
   });
 }
 
@@ -66,143 +67,7 @@ dots.forEach((dot, i) => dot.addEventListener('click', () => { index = i; showSl
 
 if (slides.length) setInterval(nextSlide, 5000);
 
-/* ════════════ 4. CARRUSEL DE CARDS CON TIEMPO DE ESPERA ════════════
-   Las cards se desplazan solas, pero con una pausa larga (7 segundos)
-   para que se alcancen a leer. Además se frena cuando el mouse entra
-   al carrusel, cuando se usa el teclado dentro, o con el botón Pausar.
-   ══════════════════════════════════════════════════════════════════ */
-
-const ESPERA = 7000;            // tiempo de lectura entre cada movimiento (ms)
-
-const track      = document.getElementById('cards-track');
-const zona       = document.getElementById('cards-carrusel');
-const contDots   = document.getElementById('cards-dots');
-const barraTiempo= document.getElementById('barra-tiempo');
-const btnPausa   = document.getElementById('cards-pausa');
-const cPrev      = document.getElementById('cards-prev');
-const cNext      = document.getElementById('cards-next');
-
-if (track) {
-  const cards = Array.from(track.children);
-  let pos = 0;           // índice de la card que está primera a la izquierda
-  let pausado = false;   // pausa manual con el botón
-  let congelado = false; // pausa temporal (mouse encima / pestaña oculta)
-  let t0 = null;         // marca de tiempo del ciclo actual
-  let transcurrido = 0;  // tiempo acumulado del ciclo (para reanudar donde quedó)
-
-  // Cuántas cards entran a la vista según el ancho de pantalla
-  function visibles() {
-    const w = window.innerWidth;
-    if (w <= 768) return 1;
-    if (w <= 980) return 2;
-    return 3;
-  }
-
-  function maxPos() { return Math.max(0, cards.length - visibles()); }
-
-  // Mueve el track y marca el dot correspondiente
-  function irA(i) {
-    pos = i;
-    if (pos > maxPos()) pos = 0;
-    if (pos < 0) pos = maxPos();
-
-    const card = cards[0];
-    const gap = parseFloat(getComputedStyle(track).gap) || 24;
-    const paso = card.getBoundingClientRect().width + gap;
-
-    track.style.transform = `translateX(-${pos * paso}px)`;
-
-    contDots.querySelectorAll('.cards-dot').forEach((d, k) => {
-      d.classList.toggle('active', k === pos);
-    });
-
-    reiniciarReloj();
-  }
-
-  // Construye los puntitos de navegación
-  function armarDots() {
-    contDots.innerHTML = '';
-    for (let i = 0; i <= maxPos(); i++) {
-      const b = document.createElement('button');
-      b.className = 'cards-dot' + (i === pos ? ' active' : '');
-      b.setAttribute('aria-label', 'Ir al grupo ' + (i + 1));
-      b.addEventListener('click', () => irA(i));
-      contDots.appendChild(b);
-    }
-  }
-
-  /* ── Reloj del carrusel ──
-     En vez de un setInterval seco, usamos requestAnimationFrame para
-     poder pintar la barra de progreso y congelar el conteo cuando hace
-     falta, sin que el usuario pierda el tiempo que ya había esperado. */
-  function reiniciarReloj() { transcurrido = 0; t0 = performance.now(); }
-
-  function tic(ahora) {
-    if (t0 === null) t0 = ahora;
-
-    if (pausado || congelado) {
-      t0 = ahora - transcurrido;     // congela el conteo donde estaba
-    } else {
-      transcurrido = ahora - t0;
-      if (transcurrido >= ESPERA) { irA(pos + 1); }
-    }
-
-    if (barraTiempo) {
-      const pct = Math.min(100, (transcurrido / ESPERA) * 100);
-      barraTiempo.style.width = pct + '%';
-      barraTiempo.style.opacity = (pausado || congelado) ? 0.35 : 1;
-    }
-
-    requestAnimationFrame(tic);
-  }
-
-  // Frena al pasar el mouse o al navegar con teclado dentro del carrusel
-  zona.addEventListener('mouseenter', () => { congelado = true; });
-  zona.addEventListener('mouseleave', () => { congelado = false; });
-  zona.addEventListener('focusin',  () => { congelado = true; });
-  zona.addEventListener('focusout', () => { congelado = false; });
-
-  // Frena también si el usuario se va a otra pestaña
-  document.addEventListener('visibilitychange', () => { congelado = document.hidden; });
-
-  // Flechas
-  if (cNext) cNext.addEventListener('click', () => irA(pos + 1));
-  if (cPrev) cPrev.addEventListener('click', () => irA(pos - 1));
-
-  // Botón pausar / reanudar
-  if (btnPausa) {
-    btnPausa.addEventListener('click', () => {
-      pausado = !pausado;
-      btnPausa.innerHTML = pausado
-        ? '<i class="fa-solid fa-play"></i> Reanudar'
-        : '<i class="fa-solid fa-pause"></i> Pausar';
-    });
-  }
-
-  // Arrastre con el dedo en celulares
-  let xInicio = null;
-  zona.addEventListener('touchstart', e => { xInicio = e.touches[0].clientX; }, { passive: true });
-  zona.addEventListener('touchend', e => {
-    if (xInicio === null) return;
-    const dif = xInicio - e.changedTouches[0].clientX;
-    if (Math.abs(dif) > 50) irA(dif > 0 ? pos + 1 : pos - 1);
-    xInicio = null;
-  });
-
-  // Recalcula todo si cambia el tamaño de la ventana
-  let temporizadorResize;
-  window.addEventListener('resize', () => {
-    clearTimeout(temporizadorResize);
-    temporizadorResize = setTimeout(() => { armarDots(); irA(Math.min(pos, maxPos())); }, 150);
-  });
-
-  // Arranque
-  armarDots();
-  irA(0);
-  requestAnimationFrame(tic);
-}
-
-/* ════════════ 5. CHATBOT ════════════ */
+/* ════════════ 4. CHATBOT ════════════ */
 let isOpen = false;
 
 function toggleChat() {

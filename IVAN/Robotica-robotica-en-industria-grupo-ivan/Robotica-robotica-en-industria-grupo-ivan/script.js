@@ -52,7 +52,11 @@ function enviar() {
   
   if (texto !== '') {
     // Mensaje del usuario
-    chat.innerHTML += `<div class="mensaje usuario">${texto}</div>`;
+    // textContent (y no innerHTML) para que no se pueda inyectar HTML desde el chat
+    const msgUsuario = document.createElement('div');
+    msgUsuario.className = 'mensaje usuario';
+    msgUsuario.textContent = texto;
+    chat.appendChild(msgUsuario);
     input.value = '';
     
     // Auto-scroll hacia abajo
