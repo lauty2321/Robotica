@@ -1,0 +1,38 @@
+warning: in the working copy of 'IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/Proyecto.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/aplicaciones.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/contacto.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/exploracion-espacial.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/javascript.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/robotica.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Proyecto.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'aplicaciones.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'contacto.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exploracion-espacial.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pagrobotica/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'proyecto.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'robotica.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'style.css', LF will be replaced by CRLF the next time Git touches it
+ .../Proyecto.html                                  |   47 [32m+[m[31m-[m
+ .../aplicaciones.html                              |  117 [32m+[m[31m--[m
+ .../contacto.html                                  |   80 [32m+[m[31m-[m
+ .../exploracion-espacial.html                      |   76 [32m+[m[31m-[m
+ .../index.html                                     | 1032 [32m+++++++[m[31m-------------[m
+ .../javascript.js                                  |  492 [32m+++++[m[31m-----[m
+ .../robotica.html                                  |   49 [32m+[m[31m-[m
+ .../script.js                                      |    6 [32m+[m[31m-[m
+ Menu de nav/Proyecto.html                          |    1 [32m+[m
+ Menu de nav/contacto.html                          |    1 [32m+[m
+ Menu de nav/robotica.html                          |    1 [32m+[m
+ Proyecto.html                                      |   55 [32m++[m
+ aplicaciones.html                                  |  114 [32m+[m[31m--[m
+ contacto.html                                      |   34 [32m+[m
+ exploracion-espacial.html                          |   69 [32m+[m[31m-[m
+ index.html                                         |  274 [32m+++[m[31m---[m
+ pagrobotica/index.html                             |  923 [32m++++++[m[31m-----------[m
+ proyecto.js                                        |  613 [32m++++++[m[31m------[m
+ robotica.html                                      |   44 [32m+[m[31m-[m
+ script.js                                          |  147 [32m++[m[31m-[m
+ style.css                                          |   37 [32m+[m[31m-[m
+ 21 files changed, 1850 insertions(+), 2362 deletions(-)
