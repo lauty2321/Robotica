@@ -1,69 +1,55 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aplicaciones de la robótica en distintos campos">
-    <title>Aplicaciones de la Robótica</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <a href="Index.html" aria-label="Volver al inicio">
-            <img src="img/rmasm-avatar.png" alt="Logo Robótica">
-        </a>
-        <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav">☰</button>
-        <ul id="menu-nav">
-            <li><a href="Index.html">Inicio</a></li>
-            <li><a href="robotica.html">Robótica</a></li>
-            <li><a href="aplicaciones.html" aria-current="page">Aplicaciones</a></li>
-            <li><a href="Proyecto.html">Proyecto</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><button id="btn-tema" class="btn-tema">🌙 Modo Oscuro</button></li>
-        </ul>
-    </nav>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Aplicaciones de la robótica en distintos campos" name="description"/>
+<title>Aplicaciones de la Robótica | RMAsm · Robótica Mano Amiga</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="imagenes-referencia.css" rel="stylesheet"/>
+<link href="navegacion.css" rel="stylesheet"/>
+<meta content="Aplicaciones de la Robótica | RMAsm · Robótica Mano Amiga" property="og:title"/><meta content="Aplicaciones de la robótica en distintos campos" property="og:description"/><meta content="website" property="og:type"/><meta content="summary_large_image" name="twitter:card"/></head>
+<body><header class="sitio-cabecera"><div class="sitio-barra"><a aria-label="Inicio" class="sitio-marca" href="index.html"><img alt="" src="img/rmasm-avatar.png"/><span>RMAsm<small>Robótica Mano Amiga</small></span></a><button aria-controls="sitio-menu" aria-expanded="false" aria-label="Abrir navegación del sitio" class="sitio-menu-toggle" type="button">☰</button><nav aria-label="Todo el sitio" class="sitio-menu" id="sitio-menu"><a class="enlace-menu enlace-inicio" href="index.html">Inicio</a><a class="enlace-menu" href="robotica.html">Robótica</a><a aria-current="page" class="enlace-menu" href="aplicaciones.html">Aplicaciones</a><a class="enlace-menu" href="IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/index.html">Industria</a><a class="enlace-menu" href="espacialrobotica/index.html">Espacio</a><a class="enlace-menu" href="Proyecto.html">Proyectos</a><a class="enlace-menu" href="contacto.html">Contacto</a><button class="btn-tema" id="btn-tema">🌙 Modo Oscuro</button></nav></div></header>
 
-    <main>
-        <header class="page-heading">
-            <h1>Aplicaciones de la robótica</h1>
-            <p>Los robots colaboran con las personas en áreas donde se necesita precisión, resistencia y nuevas formas de explorar el mundo.</p>
-        </header>
-
-        <section class="cards application-cards" aria-label="Áreas de aplicación de la robótica">
-            <article class="card application-card">
-                <img src="img/robotica.jpg" alt="Robot utilizado en la industria">
-                <h3>Industria</h3>
-                <p>Los robots automatizan líneas de producción, manipulan materiales y realizan tareas repetitivas con gran precisión.</p>
-                <a class="card-button" href="IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/index.html">Conocer más</a>
-            </article>
-
-            <article class="card application-card">
-                <img src="img/modelo 1.jpg" alt="Tecnología robótica aplicada a la medicina">
-                <h3>Medicina</h3>
-                <p>La robótica ayuda en cirugías, rehabilitación, diagnóstico y asistencia a pacientes para mejorar su calidad de vida.</p>
-            </article>
-
-            <article class="card application-card">
-                <img src="img/Modelo 2.jfif" alt="Robot usado para aprender en educación">
-                <h3>Educación</h3>
-                <p>Los robots educativos convierten la programación y la ciencia en experiencias prácticas, creativas y colaborativas.</p>
-            </article>
-
-            <article class="card application-card">
-                <img src="img/modelo 3.jpg" alt="Robot explorando el espacio">
-                <h3>Exploración espacial</h3>
-                <p>Los robots estudian planetas y ambientes extremos, y permiten investigar lugares donde las personas no pueden llegar.</p>
-                <a class="card-button" href="exploracion-espacial.html">Conocer más</a>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <img src="img/rmasm-avatar.png" alt="Logo">
-        <p>© 2026 Todos los derechos reservados</p>
-        <p>Robótica y Tecnología</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+<main>
+<header class="page-heading">
+<h1>Aplicaciones de la robótica</h1>
+<p>Los robots colaboran con las personas en áreas donde se necesita precisión, resistencia y nuevas formas de explorar el mundo.</p>
+</header>
+<section aria-label="Áreas de aplicación de la robótica" class="cards application-cards">
+<article class="card application-card">
+<img alt="Robots industriales soldando en una línea de montaje" loading="lazy" src="img/soldadura.jpg"/>
+<h3>Robótica industrial</h3>
+<p>Soldadura, montaje, logística y automatización en las fábricas.</p>
+<a class="enlace-destino" href="IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/index.html">Explorar la industria</a>
+</article>
+<article class="card application-card">
+<img alt="Rover Perseverance en Marte" loading="lazy" src="espacialrobotica/img/perseverance.jpg"/>
+<h3>Robótica espacial</h3>
+<p>Conocé Perseverance, Canadarm2, Dextre y las sondas que ayudan a explorar el universo.</p>
+<a class="enlace-destino" href="espacialrobotica/index.html">Explorar el espacio</a>
+</article>
+<article class="card application-card">
+<img alt="Robot de cirugía asistida en un quirófano" loading="lazy" src="img/cirugia-robotica.jpg"/>
+<h3>Robótica en medicina</h3>
+<p>Cirugías de precisión, rehabilitación con exoesqueletos, prótesis inteligentes y robots que asisten en hospitales.</p>
+<a class="enlace-destino" href="medicina.html">Explorar la medicina</a>
+</article>
+<article class="card application-card">
+<img alt="Robot educativo y placa Arduino sobre una mesa" loading="lazy" src="img/educacion.jpg"/>
+<h3>Educación</h3>
+<p>Los robots educativos convierten la programación y la ciencia en experiencias prácticas, creativas y colaborativas.</p>
+<a class="enlace-destino" href="educacion.html">Explorar la educación</a>
+<a class="enlace-destino" href="Proyecto.html">Ver los proyectos</a>
+</article>
+</section>
+</main>
+<footer>
+<img alt="Logo" src="img/rmasm-avatar.png"/>
+<p>© 2026 Todos los derechos reservados</p>
+<p>Robótica y Tecnología</p>
+</footer>
+<script src="script.js"></script>
+<script defer="" src="sitio.js"></script></body>
 </html>

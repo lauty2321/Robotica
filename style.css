@@ -312,7 +312,7 @@ nav ul li a:hover::after { width: 100%; }
 .hero-robot { position: relative; display: flex; justify-content: center; }
 
 .hero-robot img {
-  width: min(280px, 78%);
+  width: min(430px, 100%);
   animation: flotar 5s ease-in-out infinite;
   filter: drop-shadow(0 26px 44px rgba(11, 63, 145, 0.42));
 }
@@ -401,22 +401,6 @@ nav ul li a:hover::after { width: 100%; }
 }
 
 .card button:hover {
-  background: #005ecc;
-}
-
-.card-button {
-  display: inline-block;
-  margin: 15px;
-  padding: 10px 20px;
-  background: var(--azul-oscuro);
-  color: #fff;
-  border-radius: 5px;
-  font-size: 14px;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.card-button:hover {
   background: #005ecc;
 }
 
@@ -712,7 +696,7 @@ footer p {
   .hero-texto p { margin-inline: auto; }
   .hero-acciones, .hero-stats { justify-content: center; }
   .hero-robot { order: -1; }
-  .hero-robot img { width: min(200px, 62%); }
+  .hero-robot img { width: min(280px, 80%); }
   .nosotros-grid { grid-template-columns: 1fr; }
   .card { flex: 0 0 calc((100% - 24px) / 2); }
 }
@@ -1035,12 +1019,25 @@ body, body * {
   transition-timing-function: ease;
 }
 body .hero-robot img {
-  width: min(230px, 72%);
+  width: min(430px, 100%);
 }
 @media (max-width: 980px) {
-  body .hero-robot img { width: min(175px, 58%); }
+  body .hero-robot img { width: min(280px, 80%); }
 }
 @media (max-width: 600px) {
   nav > a img, nav > img { width: 34px; height: 34px; max-width: 34px; }
   nav.nav-compacta > a img, nav.nav-compacta > img { width: 27px; height: 27px; max-width: 27px; }
 }
+
+/* ═══ Portada a todo el ancho de la pantalla ═══ */
+header.hero.contenedor {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  min-height: calc(100vh - 70px);
+  padding: clamp(40px, 7vw, 90px) max(5%, calc((100% - 1180px) / 2));
+  isolation: isolate;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--azul) 10%, transparent), color-mix(in srgb, var(--cian) 8%, transparent));
+}
+.hero-texto h1 { font-size: clamp(30px, 6vw, 58px); overflow-wrap: anywhere; }
+@media (max-width: 980px) { header.hero.contenedor { min-height: auto; } }

@@ -140,11 +140,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- 5. Sección interactiva: ¿qué habilidad estás desarrollando? ---------- */
   var explicacionesHabilidad = {
-    programacion: 'Programar es escribirle instrucciones claras a una máquina. Cada vez que armás una secuencia para un robot, estás practicando esta habilidad.',
-    creatividad: 'La creatividad aparece cuando el camino esperado no funciona y hay que imaginar una solución distinta a la que estaba planeada.',
-    logica: 'El pensamiento lógico es ordenar los pasos de un problema para llegar a un resultado, sin saltarse ninguno.',
-    equipo: 'Trabajar en equipo es repartir tareas según lo que cada uno sabe hacer mejor, y juntar esas partes en un solo proyecto.',
-    problemas: 'Resolver problemas es probar algo, ver qué falla, ajustar y volver a intentar, tantas veces como haga falta.'
+    soldadura: 'Los robots de soldadura unen piezas metálicas con precisión y repetitividad, protegiendo a las personas del calor y las chispas.',
+    montaje: 'Los robots de montaje colocan y ensamblan componentes para fabricar productos de forma precisa.',
+    transporte: 'Los robots de transporte mueven materiales y productos entre las estaciones de una fábrica.',
+    calidad: 'Los robots de control de calidad utilizan cámaras y sensores para detectar defectos y comprobar medidas.',
+    empaque: 'Los robots de empaquetado organizan productos, los colocan en cajas y los preparan para su distribución.'
   };
 
 

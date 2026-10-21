@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Contactá al equipo de RMAsm · Robótica Mano Amiga." name="description"/>
+<title>Contacto | RMAsm · Robótica Mano Amiga</title>
+<link href="img/rmasm-avatar.png" rel="shortcut icon" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="navegacion.css" rel="stylesheet"/>
+<meta content="Contacto | RMAsm · Robótica Mano Amiga" property="og:title"/><meta content="Contactá al equipo de RMAsm · Robótica Mano Amiga." property="og:description"/><meta content="website" property="og:type"/><meta content="summary_large_image" name="twitter:card"/></head>
+<body><header class="sitio-cabecera"><div class="sitio-barra"><a aria-label="Inicio" class="sitio-marca" href="index.html"><img alt="" src="img/rmasm-avatar.png"/><span>RMAsm<small>Robótica Mano Amiga</small></span></a><button aria-controls="sitio-menu" aria-expanded="false" aria-label="Abrir navegación del sitio" class="sitio-menu-toggle" type="button">☰</button><nav aria-label="Todo el sitio" class="sitio-menu" id="sitio-menu"><a class="enlace-menu enlace-inicio" href="index.html">Inicio</a><a class="enlace-menu" href="robotica.html">Robótica</a><a class="enlace-menu" href="aplicaciones.html">Aplicaciones</a><a class="enlace-menu" href="IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/index.html">Industria</a><a class="enlace-menu" href="espacialrobotica/index.html">Espacio</a><a class="enlace-menu" href="Proyecto.html">Proyectos</a><a aria-current="page" class="enlace-menu" href="contacto.html">Contacto</a><button class="btn-tema" id="btn-tema">🌙 Modo Oscuro</button></nav></div></header>
+
+<main class="detail-page contact-page">
+<h1>Contactanos</h1>
+<p>¿Tenés una pregunta, una propuesta o querés sumarte a robótica? Podés contactarnos por correo electrónico o teléfono.</p>
+<form class="contact-form" id="contact-form">
+<label for="nombre">Nombre<input autocomplete="name" id="nombre" name="nombre" required="" type="text"/></label>
+<label for="email">Correo electrónico<input autocomplete="email" id="email" name="email" required="" type="email"/></label>
+<label for="mensaje">Mensaje<textarea id="mensaje" name="mensaje" required=""></textarea></label>
+<button class="contact-submit" type="submit">Probar formulario</button>
+<p aria-live="polite" class="contact-status" id="contact-status" role="status"></p>
+</form>
+<p class="contact-details">También podés escribir a <a href="mailto:neulautaroramon@colegiomanoamiga.edu.ar">neulautaroramon@colegiomanoamiga.edu.ar</a> o llamar al <a href="tel:+5411265444906">+54 11265444906</a>.</p>
+</main>
+<footer><img alt="Logo" src="img/rmasm-avatar.png"/><p>© 2026 Todos los derechos reservados</p><p>RMAsm · Robótica Mano Amiga</p></footer>
+<script src="script.js"></script>
+<script>
+    const f=document.getElementById('contact-form'),st=document.getElementById('contact-status');
+    f.addEventListener('submit',e=>{e.preventDefault();const n=new FormData(f).get('nombre');st.textContent='Gracias, '+n+'. Esta es una demostración: el mensaje no se envió. Usá el enlace de correo para contactarnos.';f.reset();});
+    </script>
+<script defer="" src="sitio.js"></script></body>
+</html>

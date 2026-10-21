@@ -1,6 +1,8 @@
 const proyectos = {
 
     primero: {
+        imagen: "img/leds.jpg",
+        imagenAlt: "Circuito sencillo con LED, resistencia y protoboard",
         etiqueta: "1.º AÑO",
         titulo: "Introducción a la Robótica",
         descripcion: "Primer acercamiento al mundo de la tecnología y la robótica.",
@@ -24,6 +26,8 @@ const proyectos = {
     },
 
     segundo: {
+        imagen: "img/arduino-leds.jpg",
+        imagenAlt: "Arduino conectado a una protoboard con LEDs",
         etiqueta: "2.º AÑO",
         titulo: "Programación y Arduino",
         descripcion: "Programación aplicada a dispositivos electrónicos.",
@@ -47,6 +51,8 @@ const proyectos = {
     },
 
     tercero: {
+        imagen: "img/semaforo.jpg",
+        imagenAlt: "Semáforo con luces roja, amarilla y verde controlado por Arduino",
         etiqueta: "3.º AÑO",
         titulo: "Sistema de Semáforo",
         descripcion: "Proyecto de automatización utilizando Arduino.",
@@ -70,6 +76,8 @@ const proyectos = {
     },
 
     cuarto: {
+        imagen: "img/barrera.jpg",
+        imagenAlt: "Barrera automática con servomotor y sensor de distancia",
         etiqueta: "4.º AÑO",
         titulo: "Automatización con Arduino",
         descripcion: "Desarrollo de sistemas automatizados.",
@@ -93,6 +101,8 @@ const proyectos = {
     },
 
     quinto: {
+        imagen: "img/rfid.jpg",
+        imagenAlt: "Lector RFID, tarjeta y Arduino para activar un mecanismo",
         etiqueta: "5.º AÑO",
         titulo: "Robótica Aplicada",
         descripcion: "Integración de programación, electrónica y automatización.",
@@ -117,6 +127,8 @@ const proyectos = {
     },
 
     sexto: {
+        imagen: "img/acceso-rfid.jpg",
+        imagenAlt: "Control de acceso con Arduino, RFID, servomotor y LEDs",
         etiqueta: "6.º AÑO - PROYECTO DESTACADO",
         titulo: "Control de Acceso con RFID y Arduino",
         descripcion:
@@ -244,6 +256,9 @@ function mostrarProyecto(año) {
     descripcion.textContent = proyecto.descripcion;
 
     contenido.innerHTML = proyecto.contenido;
+
+    const imagen = document.getElementById("detalle-imagen");
+    if (imagen) { imagen.src = proyecto.imagen; imagen.alt = proyecto.imagenAlt; }
 
     detalle.classList.add("mostrar");
 

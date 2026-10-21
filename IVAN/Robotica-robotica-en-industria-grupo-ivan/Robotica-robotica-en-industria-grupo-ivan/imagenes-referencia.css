@@ -1,0 +1,6 @@
+/* Illustrative robotics images: retain the existing page theme. */
+.referencia-figura { margin: 24px 0; }
+.referencia-figura .imagen-referencia { display: block; width: 100%; max-width: 800px; height: auto; border-radius: 8px; }
+.referencia-figura figcaption { font-size: .8rem; margin-top: 8px; color: inherit; opacity: .75; }
+.anio-btn .anio-imagen { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 6px; margin-bottom: 14px; }
+#detalle-imagen { max-height: 320px; object-fit: contain; }

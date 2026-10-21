@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Proyectos y contenidos de robótica de 1.º a 6.º año en RMAsm." name="description"/>
+<title>Proyecto | RMAsm · Robótica Mano Amiga</title>
+<link href="img/rmasm-avatar.png" rel="shortcut icon" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+        .anios { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:18px; margin:32px 0; }
+        .anio-btn { text-align:left; cursor:pointer; font:inherit; background:var(--superficie); color:inherit; border:1px solid var(--borde); border-radius:var(--radio); padding:20px; box-shadow:var(--sombra); transition:transform .2s; }
+        .anio-btn:hover { transform:translateY(-4px); }
+        .anio-btn strong { display:block; color:var(--azul); font-size:.85rem; letter-spacing:.08em; margin-bottom:6px; }
+        .anio-btn span { font-weight:700; font-size:1.1rem; }
+        #detalle-proyecto { position:fixed; inset:0; background:rgba(0,0,0,.6); display:none; align-items:center; justify-content:center; padding:20px; z-index:1000; }
+        #detalle-proyecto.mostrar { display:flex; }
+        .detalle-caja { background:var(--superficie); color:inherit; border-radius:var(--radio); padding:28px; max-width:640px; width:100%; max-height:85vh; overflow:auto; position:relative; }
+        .detalle-cerrar { position:absolute; top:12px; right:14px; border:0; background:none; font-size:1.4rem; cursor:pointer; color:inherit; }
+        #detalle-etiqueta { color:var(--azul); font-weight:700; letter-spacing:.08em; font-size:.85rem; }
+        #detalle-contenido ul { padding-left:20px; }
+    </style>
+<link href="imagenes-referencia.css" rel="stylesheet"/>
+<link href="navegacion.css" rel="stylesheet"/>
+<meta content="Proyecto | RMAsm · Robótica Mano Amiga" property="og:title"/><meta content="Proyectos y contenidos de robótica de 1.º a 6.º año en RMAsm." property="og:description"/><meta content="website" property="og:type"/><meta content="summary_large_image" name="twitter:card"/></head>
+<body><header class="sitio-cabecera"><div class="sitio-barra"><a aria-label="Inicio" class="sitio-marca" href="index.html"><img alt="" src="img/rmasm-avatar.png"/><span>RMAsm<small>Robótica Mano Amiga</small></span></a><button aria-controls="sitio-menu" aria-expanded="false" aria-label="Abrir navegación del sitio" class="sitio-menu-toggle" type="button">☰</button><nav aria-label="Todo el sitio" class="sitio-menu" id="sitio-menu"><a class="enlace-menu enlace-inicio" href="index.html">Inicio</a><a class="enlace-menu" href="robotica.html">Robótica</a><a class="enlace-menu" href="aplicaciones.html">Aplicaciones</a><a class="enlace-menu" href="IVAN/Robotica-robotica-en-industria-grupo-ivan/Robotica-robotica-en-industria-grupo-ivan/index.html">Industria</a><a class="enlace-menu" href="espacialrobotica/index.html">Espacio</a><a aria-current="page" class="enlace-menu" href="Proyecto.html">Proyectos</a><a class="enlace-menu" href="contacto.html">Contacto</a><button class="btn-tema" id="btn-tema">🌙 Modo Oscuro</button></nav></div></header>
+
+<main class="detail-page">
+<h1>Nuestro proyecto</h1>
+<p>Recorré los contenidos y proyectos de robótica de cada año. Tocá un año para ver el detalle.</p>
+<div class="anios">
+<button class="anio-btn" onclick="mostrarProyecto('primero')"><img alt="Circuito sencillo con LED, resistencia y protoboard" class="anio-imagen" height="506" loading="lazy" src="img/leds.jpg" width="506"/><strong>1.º AÑO</strong><span>Introducción a la Robótica</span></button>
+<button class="anio-btn" onclick="mostrarProyecto('segundo')"><img alt="Arduino conectado a una protoboard con LEDs" class="anio-imagen" height="506" loading="lazy" src="img/arduino-leds.jpg" width="506"/><strong>2.º AÑO</strong><span>Programación y Arduino</span></button>
+<button class="anio-btn" onclick="mostrarProyecto('tercero')"><img alt="Semáforo con luces roja, amarilla y verde controlado por Arduino" class="anio-imagen" height="506" loading="lazy" src="img/semaforo.jpg" width="506"/><strong>3.º AÑO</strong><span>Sistema de Semáforo</span></button>
+<button class="anio-btn" onclick="mostrarProyecto('cuarto')"><img alt="Barrera automática con servomotor y sensor de distancia" class="anio-imagen" height="506" loading="lazy" src="img/barrera.jpg" width="506"/><strong>4.º AÑO</strong><span>Automatización con Arduino</span></button>
+<button class="anio-btn" onclick="mostrarProyecto('quinto')"><img alt="Lector RFID, tarjeta y Arduino para activar un mecanismo" class="anio-imagen" height="506" loading="lazy" src="img/rfid.jpg" width="506"/><strong>5.º AÑO</strong><span>Robótica Aplicada</span></button>
+<button class="anio-btn" onclick="mostrarProyecto('sexto')"><img alt="Control de acceso con Arduino, RFID, servomotor y LEDs" class="anio-imagen" height="506" loading="lazy" src="img/acceso-rfid.jpg" width="506"/><strong>6.º AÑO</strong><span>Control de Acceso con RFID y Arduino</span></button>
+</div>
+</main>
+<div aria-labelledby="detalle-titulo" aria-modal="true" id="detalle-proyecto" role="dialog">
+<div class="detalle-caja">
+<button aria-label="Cerrar" class="detalle-cerrar" onclick="cerrarProyecto()">✕</button>
+<span id="detalle-etiqueta"></span>
+<h2 id="detalle-titulo"></h2>
+<p id="detalle-descripcion"></p>
+<figure class="referencia-figura"><img alt="" class="imagen-referencia" id="detalle-imagen"/><figcaption>Imagen ilustrativa generada con IA; no es una foto del proyecto del colegio ni un esquema de conexiones.</figcaption></figure>
+<div id="detalle-contenido"></div>
+</div>
+</div>
+<footer><img alt="Logo" src="img/rmasm-avatar.png"/><p>© 2026 Todos los derechos reservados</p><p>RMAsm · Robótica Mano Amiga</p></footer>
+<script src="script.js"></script>
+<script src="proyecto.js"></script>
+<script defer="" src="sitio.js"></script></body>
+</html>
