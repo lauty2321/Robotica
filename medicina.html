@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Informe interactivo sobre la robótica en la medicina moderna.">
+<title>Robótica en la Medicina Moderna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="medicina.css">
+</head>
+<body>
+<header class="topbar">
+  <nav>
+    <a class="brand" href="#inicio"><span class="brand-icon">⚕</span><span>Robótica Médica</span></a>
+    <div class="nav-links">
+      <a href="Index.html">Inicio</a>
+      <a href="aplicaciones.html">Aplicaciones</a>
+      <a href="ventajas.html">Ventajas</a>
+      
+      <button id="themeBtn" class="theme-btn">🌙 Modo oscuro</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">INFORME DE INVESTIGACIÓN · SEPTIEMBRE 2026</span>
+    <h1>La Robótica en la <span>Medicina Moderna</span></h1>
+    <p>Usos, ventajas y aplicaciones de una tecnología que combina ingeniería, electrónica, inteligencia artificial y ciencias de la salud.</p>
+    <div class="hero-actions">
+      <a class="primary-btn" href="#aplicaciones">Explorar informe →</a>
+      <button class="secondary-btn" onclick="toggleChat()">🤖 Preguntarle al asistente</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="glow"></div>
+    <img src="img/robotica.jpg" alt="Imagen relacionada con robótica">
+    <div class="floating-card"><strong>6</strong><span>áreas principales de aplicación</span></div>
+  </div>
+</section>
+
+<section class="intro section">
+  <div class="section-heading"><span>01</span><div><p class="kicker">INTRODUCCIÓN</p><h2>Una tecnología que ya forma parte de la medicina</h2></div></div>
+  <div class="intro-grid">
+    <p>La robótica médica combina la ingeniería mecánica, la electrónica, la inteligencia artificial y las ciencias de la salud para crear sistemas capaces de asistir, complementar o incluso superar las capacidades humanas en tareas clínicas.</p>
+    <p>Hoy existen brazos mecánicos para cirugía, exoesqueletos para rehabilitación, prótesis avanzadas, robots de transporte y sistemas de desinfección. Estas tecnologías forman parte de la práctica médica moderna en distintos contextos.</p>
+  </div>
+</section>
+
+<section class="timeline section">
+  <div class="section-heading"><span>02</span><div><p class="kicker">CONTEXTO HISTÓRICO</p><h2>Del primer brazo robótico a la cirugía moderna</h2></div></div>
+  <div class="timeline-grid">
+    <article><b>1985</b><h3>PUMA 560</h3><p>El doctor Yik San Kwoh utilizó un brazo robótico industrial para guiar con precisión una biopsia neuroquirúrgica.</p></article>
+    <article><b>Años 90</b><h3>Robots comerciales</h3><p>Sistemas comerciales como el posteriormente conocido como Da Vinci abrieron camino a la cirugía mínimamente invasiva asistida por robot.</p></article>
+    <article><b>Hoy</b><h3>Medicina conectada</h3><p>La robótica se extiende a cirugía, rehabilitación, prótesis, logística, desinfección, telemedicina y asistencia con IA.</p></article>
+  </div>
+</section>
+
+<section id="aplicaciones" class="section applications">
+  <div class="section-heading"><span>03</span><div><p class="kicker">APLICACIONES PRINCIPALES</p><h2>¿Dónde se utiliza la robótica médica?</h2></div></div>
+  <div class="cards">
+    <article class="card featured"><div class="number">01</div><div class="card-icon">🦾</div><h3>Cirugía asistida por robot</h3><p>El cirujano controla brazos robóticos desde una consola. Los instrumentos realizan movimientos precisos y a escala reducida, mientras el sistema filtra el temblor natural.</p><small>Urología · cardiología · ginecología · oncología · cirugía digestiva</small></article>
+    <article class="card"><div class="number">02</div><div class="card-icon">🦿</div><h3>Rehabilitación con exoesqueletos</h3><p>Estructuras externas motorizadas que asisten o restauran el movimiento, especialmente en lesiones medulares, accidentes cerebrovasculares y otras afecciones neuromotoras.</p></article>
+    <article class="card"><div class="number">03</div><div class="card-icon">✋</div><h3>Prótesis avanzadas</h3><p>Las prótesis mioeléctricas captan señales eléctricas de los músculos residuales y las traducen en movimientos más naturales e intuitivos.</p></article>
+    <article class="card"><div class="number">04</div><div class="card-icon">🚚</div><h3>Logística hospitalaria</h3><p>Robots autónomos transportan medicamentos, muestras, ropa y alimentos, liberando al personal de tareas repetitivas de traslado.</p></article>
+    <article class="card"><div class="number">05</div><div class="card-icon">☢</div><h3>Desinfección robótica</h3><p>Robots móviles con luz UV-C recorren áreas críticas para ayudar a eliminar virus, bacterias y otros microorganismos de superficies y del aire.</p></article>
+    <article class="card"><div class="number">06</div><div class="card-icon">🧠</div><h3>Telemedicina e IA</h3><p>La robótica se integra con IA en telemedicina, asistentes virtuales, gestión de datos clínicos y apoyo a personas con discapacidad.</p></article>
+  </div>
+</section>
+
+<section id="ventajas" class="section advantages">
+  <div class="section-heading"><span>04</span><div><p class="kicker">VENTAJAS CLAVE</p><h2>¿Qué aporta esta tecnología?</h2></div></div>
+  <div class="adv-grid">
+    <div><strong>01</strong><h3>Mayor precisión</h3><p>El sistema puede filtrar el temblor y ofrecer visión tridimensional aumentada del campo quirúrgico.</p></div>
+    <div><strong>02</strong><h3>Menos dolor y cicatrices</h3><p>Las incisiones pueden ser mucho más pequeñas que en la cirugía abierta tradicional.</p></div>
+    <div><strong>03</strong><h3>Recuperación más rápida</h3><p>En determinados procedimientos, los pacientes pueden requerir menos internación y retomar antes sus actividades.</p></div>
+    <div><strong>04</strong><h3>Menor riesgo de infección</h3><p>Las heridas de menor tamaño reducen la exposición a microorganismos externos.</p></div>
+    <div><strong>05</strong><h3>Menos fatiga</h3><p>El profesional puede operar sentado y en una posición ergonómica durante intervenciones largas.</p></div>
+    <div><strong>06</strong><h3>Optimización hospitalaria</h3><p>Los robots de logística y desinfección liberan tiempo del personal para tareas asistenciales.</p></div>
+  </div>
+</section>
+
+<section id="desafios" class="section challenges">
+  <div class="section-heading"><span>05</span><div><p class="kicker">LIMITACIONES Y DESAFÍOS</p><h2>La tecnología también tiene retos</h2></div></div>
+  <div class="challenge-list">
+    <article><span>01</span><div><h3>Curva de aprendizaje</h3><p>La formación para alcanzar competencia plena puede requerir numerosos procedimientos y, durante ese período, aumentar la duración de las cirugías.</p></div></article>
+    <article><span>02</span><div><h3>Fallos técnicos</h3><p>Se han registrado fallas mecánicas en análisis de cirugías robóticas, aunque una proporción mucho menor obligó a convertir la intervención.</p></div></article>
+    <article><span>03</span><div><h3>Costos elevados</h3><p>La inversión en equipos, mantenimiento y capacitación es significativa y no siempre está claro que el costo adicional produzca mejoras clínicas frente a técnicas convencionales.</p></div></article>
+    <article><span>04</span><div><h3>Evidencia y acceso</h3><p>Algunas áreas necesitan más estudios a largo plazo y existen desafíos de inversión, formación y equidad de acceso.</p></div></article>
+  </div>
+  <div class="important-note"><span>ℹ</span><p><strong>Un punto importante:</strong> según el informe, los sistemas robóticos actuales no operan de forma autónoma. Son herramientas que amplían las capacidades del profesional, quien mantiene el control y la responsabilidad clínica.</p></div>
+</section>
+
+<section class="conclusion section">
+  <div class="conclusion-box"><p class="kicker">06 · CONCLUSIÓN</p><h2>La robótica ya no es solo una promesa futurista.</h2><p>Desde el quirófano hasta la farmacia hospitalaria, la robótica aporta precisión, menor invasividad, recuperación y optimización de recursos. Al mismo tiempo, el costo, la formación especializada y la necesidad de más evidencia a largo plazo siguen siendo desafíos para una incorporación equitativa.</p></div>
+</section>
+
+<section class="sources section">
+  <p class="kicker">FUENTES CONSULTADAS EN EL INFORME</p>
+  <ul>
+    <li>Sermo — El futuro de la robótica en la cirugía: tendencias y avances en el 2025.</li>
+    <li>Dialoguemos — La cirugía robótica redefine el futuro de la medicina moderna (2026).</li>
+    <li>OnOff.gr — Cirugía robótica en 2026: así están cambiando los quirófanos.</li>
+    <li>MEDICIENCIAS UTA — Perspectivas robóticas en la rehabilitación y terapia médica (2025).</li>
+    <li>Business Wire / Xenex Disinfection Services — Xenex Introduces the Next Generation of Coronavirus Killing Robots.</li>
+  </ul>
+</section>
+</main>
+
+<footer><div>⚕ <strong>Robótica Médica</strong></div><span>Informe de investigación · 2026</span></footer>
+
+</body>
+</html>
